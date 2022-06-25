@@ -36,7 +36,7 @@ jobs:
                   <img src='https://avatars.githubusercontent.com/$linewithoutat' style='width:150px; border-radius:50%;border: 2px solid red;'/>
                   <br/>
                   <a href='https://github.com/$linewithoutat'>$line</a>
-                </center></div>\n
+                </center></div>
               " >> ./published/stylised-members.md
           done <$file
           echo "</div>" >>./published/stylised-members.md
