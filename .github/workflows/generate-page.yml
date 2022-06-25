@@ -31,10 +31,11 @@ jobs:
           file="members.md"
           while read -r line; do
               linewithoutat=${line:1}
+              fullname=$ curl -s 'https://api.github.com/users/$linewithoutat' | jq -r '.name'
               echo -n "\
                 <div style='display: inline-block; width:200px; background-color:#000; padding: 30px; color:#fff'><center>
                   <img src='https://avatars.githubusercontent.com/$linewithoutat' style='width:150px; border-radius:50%;border: 2px solid red;'/>
-                  <br/>
+                  <br/>$fullname<br/>
                   <a href='https://github.com/$linewithoutat'>$line</a>
                 </center></div>
               " >> ./published/stylised-members.md
