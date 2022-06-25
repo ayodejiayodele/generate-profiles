@@ -39,7 +39,7 @@ jobs:
                 </center></div>
               " >> ./published/stylised-members.md
           done <$file
-          echo "</div>\n" >>./published/stylised-members.md
+          echo "</div>" >>./published/stylised-members.md
           
       - name: Publish artifacts
         uses: actions/upload-artifact@v3.1.0
