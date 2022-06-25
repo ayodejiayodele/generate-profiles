@@ -32,7 +32,7 @@ jobs:
           while read -r line; do
               linewithoutat=${line:1}
               echo -n "\
-                <div style='display: inline-block; width:200px;'><center>
+                <div style='display: inline-block; width:200px; background-color:#000; padding: 30px; color:#fff'><center>
                   <img src='https://avatars.githubusercontent.com/$linewithoutat' style='width:150px; border-radius:50%;border: 2px solid red;'/>
                   <br/>
                   <a href='https://github.com/$linewithoutat'>$line</a>
