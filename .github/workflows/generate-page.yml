@@ -37,5 +37,5 @@ jobs:
           while read -r line; do
               echo -e "<div style='display: inline-block; width:100px;'><a href='https://github.com/$line'>$line</a></div>\n"
           done <$file
-          echo "</div>" >>published/stylised-members.md
+          echo "</div>" >>/published/stylised-members.md
           
