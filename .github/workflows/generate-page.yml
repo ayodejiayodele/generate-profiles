@@ -34,7 +34,7 @@ jobs:
               fullname=$(curl -s 'https://api.github.com/users/'$linewithoutat | jq -r '.name')
               echo -n "\
                 <div style='display: inline-block; width:200px; background-color:#000; padding: 30px; color:#fff'><center>
-                  <img src='https://avatars.githubusercontent.com/$linewithoutat' style='width:150px; border-radius:50%;border: 2px solid red;'/>
+                  <img src='https://avatars.githubusercontent.com/$linewithoutat' style='width:150px; border-radius:50%;border: 2px solid #8250df;'/>
                   <br/>$fullname<br/>
                   <a href='https://github.com/$linewithoutat'>$line</a>
                 </center></div>
