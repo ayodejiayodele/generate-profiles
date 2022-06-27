@@ -30,7 +30,9 @@ jobs:
 
           file="members.md"
           while read -r line; do
-              IFS=',' read -rA data <<< "$line"
+              echo $line
+              IFS=',' read -ra data <<< "$line"
+              echo "${data[2]}"
               linewithoutat=${data[1]:1}
               userinfo=$(curl -s 'https://api.github.com/users/'$linewithoutat)
               fullname=$(echo $userinfo| jq -r '.name')
